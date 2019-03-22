@@ -1,0 +1,44 @@
+/*------------------------------------------------------------
+	Bir yazının palindrom olup olmadığını konrol eden metod
+--------------------------------------------------------------*/
+package org.app;
+class App {
+	public static void main(String [] args)
+	{
+		java.util.Scanner kb = new java.util.Scanner(System.in);
+		System.out.println("Bir yazÄ± giriniz");
+		String s = kb.nextLine();
+		
+		System.out.println(StringUtil.isPalindrome(s) ?  "isPalindrom" : "is not Palindrome");
+	}
+}
+
+class StringUtil{
+	public static String reverseForPalindrome(String s)
+	{
+		String str = "";
+		
+		for (int i = s.length() - 1; i >= 0; --i)
+				str += s.charAt(i);
+		return str;
+		
+	}
+  
+	public static boolean isPalindrom(String s)
+	{
+		s = removeWhiteSpace(s);
+		
+		return reverse(s).equals(s);
+	}
+  
+  public static String removeWhiteSpace(String s)
+	{
+		String str = "";
+		
+		for (int i = 0; i < s.length(); ++i)
+			if (!Character.isWhitespace(s.charAt(i)))
+				str += s.charAt(i);
+		return str;
+		
+	}
+}

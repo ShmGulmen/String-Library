@@ -1,0 +1,23 @@
+/*------------------------------------------------------------
+	Bir yazının pangram olup olmadığını konrol eden metod
+--------------------------------------------------------------*/
+package org.app;
+class App {
+	public static void main(String [] args)
+	{
+		String s = "The quick brown fox jumps over the lazy dog";
+		System.out.println(StringUtil.isPangram(s) ?  "is Pangram" : "is not Pangram");
+	}
+}
+class StringUtil{
+  public static boolean isPangram(String s)
+	{
+		s = s.toLowerCase();
+		String alphabet = "abcdefghijklmnopqrstuvwxyz";
+		
+		for (int i = 0; i < alphabet.length(); ++i)
+			if (s.contains(alphabet.charAt(i) + ""))
+				return true;
+		return false;
+	}
+}

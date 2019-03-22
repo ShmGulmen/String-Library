@@ -1,14 +1,14 @@
 /*------------------------------------------------------------
 	n tane karakteri bir stringe ekleyen metod
-	--------------------------------------------------------------*/
+--------------------------------------------------------------*/
 package org.app;
 
 class App {
 	public static void main(String [] args)
 	{
-		String str = "ankara";
-		char ch = 'x';
-		int n = 10;
+		String str = "castel";
+		char ch = 'z';
+		int n = 12;
 		
 		System.out.println(StringUtil.addChar(str, n, ch));
 	}

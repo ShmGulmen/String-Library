@@ -1,0 +1,20 @@
+/*------------------------------------------------------------
+	Bir yazının başındaki ve sonundaki boşlukları atan program
+	--------------------------------------------------------------*/
+  class App {
+	public static void main(String [] args)
+	{
+		java.util.Scanner kb = new java.util.Scanner(System.in);
+		System.out.println("Enter a post");
+		String s = kb.nextLine();
+		
+		System.out.printf(":%s:%n", s.trim());		
+	}
+
+  public static String trim(String s)
+	{
+		s = s.trim();
+		
+		return s.isEmpty() ? "" :  (Character.toUpperCase(s.charAt(0)) + s.substring(1).toLowerCase());
+	}
+} 

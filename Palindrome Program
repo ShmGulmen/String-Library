@@ -6,10 +6,10 @@ class App {
 	public static void main(String [] args)
 	{
 		java.util.Scanner kb = new java.util.Scanner(System.in);
-		System.out.println("Bir yazÄ± giriniz");
+		System.out.println("Enter a post");
 		String s = kb.nextLine();
 		
-		System.out.println(StringUtil.isPalindrome(s) ?  "isPalindrom" : "is not Palindrome");
+		System.out.println(StringUtil.isPalindrome(s) ?  "is Palindrom" : "is not Palindrome");
 	}
 }
 
